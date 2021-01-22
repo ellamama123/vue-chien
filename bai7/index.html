@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="test">
+        <div v-if="type === 'A'">Bạn đã chọn A</div>
+        <div v-else-if="type === 'B'">Bạn đã chọn B</div>
+        <div v-else-if="type === 'C'">Bạn đã chọn C</div>
+        <div v-else-if="type === 'D'">Bạn đã chọn D</div>
+        <div v-else>Chiến Sĩ không thể nhớ nổi</div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

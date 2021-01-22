@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Input -->
+    <div class="test">
+        <input v-model="message" placeholder="edit me">
+        <p>Message is: {{ message }}</p>
+    </div>
+
+    <!-- Check box -->
+    <div id='example-3'>
+        <input type="checkbox" id="com-chien-toi" value="Cơm chiên tỏi" v-model="checkedNames">
+        <label for="com-chien-toi">Cơm chiên tỏi</label><br>
+        <input type="checkbox" id="dot-bi-xao-toi" value="Đọt bí xào tỏi" v-model="checkedNames">
+        <label for="dot-bi-xao-toi">Đọt bí xào tỏi</label><br>
+        <input type="checkbox" id="canh-rau-rung" value="Canh rau rừng" v-model="checkedNames">
+        <label for="canh-rau-rung">Canh rau rừng</label>
+        <br>
+        <span>Món đã chọn: {{ checkedNames }}</span>
+    </div>
+
+    <!-- Select -->
+    <div id="select">
+        <select v-model="selected">
+            <option disabled value="">Vui lòng chọn món</option>
+            <option>Đọt bí xào tỏi</option>
+            <option>Canh bông điên điển</option>
+            <option>Lẩu nấm</option>
+          </select>
+        <span>Món đã chọn: {{ selected }}</span>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

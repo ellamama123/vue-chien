@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+    <style>
+        .active {
+            background-color: gold;
+        }
+        
+        .text-danger {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }">
+        Test 1
+    </div>
+
+    <div class="static1" v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">Test 2</div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
