@@ -1,6 +1,13 @@
 var app = new Vue({
-    el: '.msg',
+    el: '.app',
     data: {
-        msg: 'Chào mọi người'
-    },
+        msg: '"alo"',
+    }
+})
+
+var app2 = new Vue({
+    el: '.app2',
+    data: {
+        seen: true,
+    }
 })

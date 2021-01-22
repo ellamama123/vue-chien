@@ -4,17 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 <body>
-    <span class="msg">Message: {{ msg }}</span>
+    <div class="app">
+        <p>thông báo {{ msg }}</p>
+    </div>
+    <hr>
 
-    <p class="test" v-if="seen">Thoắt ẩn thoắt hiện</p>
+    <div class="app2">
+        <p>Điều kiện</p>
+        <p v-if="seen">seen</p>
+    </div>
+    <hr>
 
-
-    <script src="index.js"></script>
 </body>
+
+<script src="vue.js"></script>
 
 </html>
