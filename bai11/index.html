@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="components-demo">
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+    </div>
+    <div id="blog-post">
+        <blog-post title="Dòng thứ nhất"></blog-post>
+        <blog-post title="Dòng thứ hai"></blog-post>
+        <blog-post title="Dòng thứ ba"></blog-post>
+    </div>
+
+    <div id="blog-posts-events-demo">
+        <div :style="{ fontSize: postFontSize + 'em' }">
+            <blog-post v-for="post in posts" v-bind:key="post.id" v-bind:post="post" v-on:enlarge-text="postFontSize += 0.1"></blog-post>
+        </div>
+    </div>
+
+    <div id="alert">
+        <alert-box>
+            Cảnh báo !!!
+        </alert-box>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

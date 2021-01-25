@@ -30,7 +30,7 @@
     <!-- Vòng lặp -->
     <div id="app-4">
         <ol>
-            <li v-for="todo in todos">
+            <li v-for="todo in todos" :key="todo">
                 {{ todo.text }}
             </li>
         </ol>

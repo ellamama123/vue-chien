@@ -12,41 +12,17 @@ var vm = new Vue({
     }
 })
 
-var watchExampleVM = new Vue({
-    el: '#watch-example',
+
+var app = new Vue({
+    el: '#app',
     data: {
-        question: '',
-        answer: 'Không thể trả lời nếu bạn chưa đặt câu hỏi!'
+        name: 'Nguyen Dinh Chien'
     },
     watch: {
-        // bất cứ lúc nào câu hỏi thay đổi, hàm bên dưới sẽ chạy
-        question: function(newQuestion, oldQuestion) {
-            this.answer = 'Đang chờ bạn đặt xong câu hỏi...'
-            this.getAnswer()
+        name: function() {
+            alert(this.name);
         }
-    },
-    methods: {
-        // _.debounce là một hàm do Lodash cung cấp
-        // Để tìm hiểu rõ hơn cách hoạt động của hàm này,
-        // bạn có thể truy cập: https://lodash.com/docs#debounce 
-        getAnswer: _.debounce(
-            function() {
-                if (this.question.indexOf('?') === -1) {
-                    this.answer = 'Câu hỏi thì thường chứa một dấu "?" ;-)'
-                    return
-                }
-                this.answer = 'Đang suy nghĩ...'
-                var vm = this
-                axios.get('https://yesno.wtf/api')
-                    .then(function(response) {
-                        vm.answer = _.capitalize(response.data.answer)
-                    })
-                    .catch(function(error) {
-                        vm.answer = 'Lỗi! Không thể truy cập API. ' + error
-                    })
-            },
-            // Đây là thời gian (đơn vị mili giây) chúng ta đợi người dùng dừng gõ.
-            500
-        )
     }
-})
+});
+//thiết lập lại giá trị
+app.name = "Xin chào mọi người";
