@@ -11,18 +11,35 @@
 
 <body>
     <template>
-        <button v-on:click="blastoff">Blast Off!</button>
-      </template>
-      <script>
+    <div id="app">
+        <p>Click A {{ clickA() }} times</p>
+        <p>Click B {{ clickB() }} times</p>
+        <button v-on:click="a++">Click A</button>
+        <button v-on:click="b++">Click B</button>
+    </div>
+</template>
+
+    <script>
         export default {
-          methods: {
-            blastoff(event) {
-              alert('going to space!')
+            name: 'app',
+            data() {
+                return {
+                    a: 0,
+                    b: 0
+                }
+            },
+            methods: {
+                clickA: function() {
+                    console.log('gọi method clickA')
+                    return this.a
+                },
+                clickB: function() {
+                    console.log('gọi method clickB')
+                    return this.b
+                }
             }
-          }
         }
-      </script>
-    <button @click="blastoff">Blast Off!</button>
+    </script>
 
 
 

@@ -11,27 +11,12 @@
 
 <body>
 
-    <template>
-    <div class="card">
-      <div class="card-header">
-        <slot name="image">
-          <img class="ava" src="https://i.pravatar.cc/150?img=35" alt="Avatar">
-        </slot>
-      </div>
-      <div class="card-body">
-        <slot name="name">Tao la me day.</slot>
-      </div>
+    <div id="app">
+        <div class="parent">
+            <h2>This is parent component</h2>
+            <child>Hello from parent</child>
+        </div>
     </div>
-  </template>
-
-    <script>
-        export default {
-            name: "Mother",
-            data() {
-                return {};
-            }
-        };
-    </script>
 </body>
 
 </html>
